@@ -1,8 +1,8 @@
 const container = document.querySelector('#container');
-let gridSize = 16;
+let defaultGridSize = 16;
 
 
-function createGrid(gridSize) {
+function createGrid(gridSize = defaultGridSize) {
     for (let i = 0; i < gridSize; i++){
         const row = document.createElement('div');
         row.classList.add('row');
@@ -24,6 +24,42 @@ function createGrid(gridSize) {
 
         container.appendChild(row);
     }
+
+    const squareHover = document.querySelectorAll('.row .square')
+
+    for (let hover of squareHover){
+        hover.addEventListener('mouseover', () => {
+            hover.style.backgroundColor = randomColor();
+        })
+    }
 }
 
+function randomColor() {
+    let R = Math.floor(Math.random() * 256);
+    let G = Math.floor(Math.random() * 256);
+    let B = Math.floor(Math.random() * 256);
+
+    let color = `rgb(${R},${G},${B})`;
+
+    return color;
+}
+
+
+
+const resetButton = document.querySelector('#reset-btn');
+resetButton.addEventListener('click', () => {
+    const gridInput = document.querySelector('#grid-size');
+    let gridInputValue = gridInput.value;
+    
+    if (gridInputValue > 100) {
+        alert('Please enter a number less than or equal to 100');
+    }
+    else if (gridInputValue < 1) {
+        alert('Please enter a number greater than or equal to 1');
+    }
+    else {
+        container.innerHTML = '';
+        createGrid(gridInputValue);
+    }
+})
 createGrid();
