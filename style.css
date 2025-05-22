@@ -3,10 +3,22 @@
 }
 
 body {
+    background-color: rgb(123, 96, 158);
+    margin: 0;
+}
+
+#header {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'oooh baby';
+    color: rgb(62, 23, 80);
+    margin-top: 10px;
+}
+
+#box{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(123, 96, 158);
 }
 
 
@@ -21,30 +33,64 @@ body {
 #reset-box {
     display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 300px;
     height: 200px;
     justify-content: center;
+    align-items: center;
+    border:dotted 4px rgb(178, 55, 235);
+    border-radius: 10px;
     margin: 0 auto;
     padding: 10px;
     background-color: rgb(97, 45, 121);
 }
 
 #reset-box button {
-    width: 40%;
+    width: 50%;
     margin-top: 10px;
-    padding: 5px;
-    background-color: rgb(97, 45, 121);
-    box-shadow: inset 0px 0px 5px #000;
+    padding: 8px;
+    background-color: rgb(0, 0, 0);
     border: none;
     color: white;
+    transition: all 0.3s ease;
+}
+
+#reset-box button:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 #reset-box input {
     margin-top: 10px;
-    padding: 5px;
+    padding: 8px;
     background-color: rgb(97, 45, 121);
-    box-shadow: inset 0px 0px 5px #000;
-    border: none;
-    border: none;
     color: white;
+    width: 80%;
+}
+
+#reset-box input::placeholder {
+    color: rgb(189, 189, 189);
+}
+#reset-box input:focus {
+    outline: none;
+}
+
+#footer {
+    background-color: rgb(62, 23, 80);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 0;
+}
+
+#footer a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer a:hover {
+    text-decoration: underline;
 }

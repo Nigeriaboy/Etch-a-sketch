@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
     <title>ETCH-A-SKETCH</title>
 </head>
 <body>
-    <div id="reset-box">
-        <input type="number" id="grid-size" placeholder="Enter grid size (1-100)" autofocus autocomplete="off">
-        <button id="reset-btn">Reset Grid</button>
+    <div id="header">
+        ETCH-A-SKETCH
     </div>
-    <div id="container"></div>
+    <div id="box">
+        <div id="reset-box">
+            <input type="number" id="grid-size" placeholder="Enter grid size (1-100)" autofocus autocomplete="off">
+            <button id="reset-btn">Reset Grid</button>
+        </div>
+        <div id="container"></div>
+    </div>
+
+    <div id="footer">
+        <p>&copy; 2025 Created by <a href="https://github.com/Nigeriaboy"><em>Nigeriaboy</em></a> for the ETCH-A-SKETCH TOP project</p>
+    </div>
 
     <script src="script.js"></script>
 </body>
